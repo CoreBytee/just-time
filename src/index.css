@@ -1,7 +1,12 @@
-html, body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: monospace;
 }
 
 body {
@@ -9,45 +14,34 @@ body {
     color: white;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    height: 50vmin;
-
-    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-}
 
-p {
-    margin: 0;
-    font-size: 100%;
-}
-
-#hour, #minute, .additional {
-    aspect-ratio: 1;
-    height: 100%;
-}
-
-.additional {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    #second, #milisecond {
+    .number, .additional {
         aspect-ratio: 1;
     }
 
-    #second {
-        height: calc(100%/3*2);
+    .divider {
+        aspect-ratio: 0.33/1;
     }
 
-    #milisecond {
-        height: calc(100%/3);
+    .number, .divider, .additional {
+        height: 20vmin;
+    }
+
+    .additional {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        #second {
+            height: 70%;
+        }
+
+        #milisecond {
+            height: 30%;
+        }
     }
 }
