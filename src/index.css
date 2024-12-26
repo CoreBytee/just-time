@@ -6,7 +6,7 @@
 
 html, body {
     height: 100%;
-    font-family: monospace;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
@@ -17,6 +17,10 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    p {
+        text-align: center;
+    }
 
     .number, .additional {
         aspect-ratio: 1;
