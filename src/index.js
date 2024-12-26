@@ -1,3 +1,4 @@
+//#region Show Time
 const hour = document.getElementById('hour')
 const minute = document.getElementById('minute')
 const second = document.getElementById('second')
@@ -12,7 +13,9 @@ function update() {
 }
 
 setInterval(update, 1)
+//#endregion
 
+//#region Set font sizes
 function setFontSizes() {
     console.log(document.getElementsByClassName('fontsize'))
     Array.from(
@@ -28,3 +31,20 @@ function setFontSizes() {
 setFontSizes()
 window.addEventListener('DOMContentLoaded', setFontSizes)
 window.addEventListener('resize', setFontSizes)
+//#endregion
+
+//#region Hide mouse
+let mouseHider = null
+window.addEventListener(
+    'mousemove',
+    () => {
+        document.body.style.cursor = 'default'
+        clearTimeout(mouseHider)
+        mouseHider = setTimeout(() => {
+            document.body.style.cursor = 'none'
+        }, 3000)
+    }
+)
+
+document.body.style.cursor = 'none'
+//#endregion
