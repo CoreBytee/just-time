@@ -5,6 +5,7 @@ const second = document.getElementById('second')
 const milisecond = document.getElementById('milisecond')
 
 function update() {
+    requestAnimationFrame(update)
     const now = new Date()
     hour.innerText = now.getHours().toString().padStart(2, '0')
     minute.innerText = now.getMinutes().toString().padStart(2, '0')
@@ -12,7 +13,7 @@ function update() {
     milisecond.innerText = now.getMilliseconds().toString().padStart(3, '0')
 }
 
-setInterval(update, 1)
+update()
 //#endregion
 
 //#region Set font sizes
