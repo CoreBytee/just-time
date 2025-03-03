@@ -19,14 +19,11 @@ update()
 //#region Set font sizes
 function setFontSizes() {
     console.log(document.getElementsByClassName('fontsize'))
-    Array.from(
-        document.getElementsByClassName('fontsize')
-    ).forEach(
-        (element) => {
-            element.style.fontSize = element.clientHeight + "px"
-            element.style.lineHeight = element.clientHeight + "px"
-        }
-    )
+    const elements = document.getElementsByClassName('fontsize');
+    for (const element of elements) {
+        element.style.fontSize = `${element.clientHeight}px`;
+        element.style.lineHeight = `${element.clientHeight}px`;
+    }
 }
 
 setFontSizes()
