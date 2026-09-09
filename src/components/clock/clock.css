@@ -1,0 +1,38 @@
+.Clock {
+    font-family: "Inter Variable", sans-serif;
+    font-size: min(18vw, 200px);
+    font-weight: 800;
+    color: white;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.15),
+        0 2px 20px rgba(0, 0, 0, 0.3);
+    font-variant-numeric: tabular-nums;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+
+    .number {
+        letter-spacing: 0.02em;
+        display: inline-flex;
+    }
+
+    .digit {
+        display: inline-block;
+        transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+
+        @starting-style {
+            transform: translateY(0.3em);
+            opacity: 0;
+        }
+    }
+
+    .separator {
+        font-weight: 400;
+        opacity: 0.5;
+        align-self: center;
+        transform: translateY(-0.08em);
+    }
+}
