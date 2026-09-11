@@ -90,7 +90,7 @@ export default function Background() {
                     className="kawarp"
                     style={{ width: "100%", height: "100%" }}
                     autoPlay={true}
-                    transitionDuration={5_000}
+                    transitionDuration={1_000}
                     saturation={1}
                 />
             </div>
